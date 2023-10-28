@@ -1,6 +1,6 @@
 const { expect } = require("chai");
-//import { Knowledge } from "../src/knowledge"; 
-import { Robot } from "../src/robot"; 
+import Knowledge from "../src/knowledge"; 
+import Robot from "../src/robot"; 
 //const { Knowledge, Robot } = require("../src/index"); 
 
 describe("Robot", function () {
@@ -8,6 +8,7 @@ describe("Robot", function () {
     const robot = new Robot();
     expect (robot).to.be.an.instanceOf(Robot);
   });
+
   it("updates knowledge on move", () => {
     const robot = new Robot();
     setUpKnowledge();
