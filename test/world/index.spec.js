@@ -1,6 +1,5 @@
 const { expect } = require("chai");
-
-class World {}
+import World from "../../src/world"; 
 
 describe("Create Default World", function () {
   it("should create a default world", () => {
