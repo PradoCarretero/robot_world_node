@@ -4,4 +4,7 @@ export default class GridCell {
         this.y = y;
         this.content = content;
     }
+    adjust (x, y) {
+        return new GridCell(this.x += x, this.y += y,this.content);
+    }
 }

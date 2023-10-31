@@ -9,13 +9,14 @@ export default class Knowledge {
         return this.facts.length;
     }
 
-    addFact (newElement) {
-        this.facts.push(newElement);
-    }
-
     adjust (x, y) {
         this.x += x;
         this.y += y;
+    }
+    
+    addFact(aFact) {
+        newFact = aFact.adjust(this.x, this.y);
+        this.facts.push(newFact);
     }
 
     factAt (x, y) {

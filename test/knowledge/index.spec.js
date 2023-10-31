@@ -20,4 +20,19 @@ describe("Knowledge", function () {
     expect(knowledge.factAt(3, -1)).equal("C");
     expect(knowledge.factAt(2, 2)).equal("D");
   });
+
+  it("should adjust it twice", () => {
+    const knowledge = new Knowledge();
+    knowledge.addFact(new GridCell(1,1,"A"));
+    knowledge.adjust(2,2);
+
+    expect(knowledge.factAt(-1, -1)).equal("A");
+
+    knowledge.addFact(new GridCell(1,1,"B"));
+    knowledge.adjust(1,1);
+
+    expect(knowledge.factAt(0, 0)).equal("B");
+    expect(knowledge.factAt(-2, -2)).equal("A");
+  })
+
 });
