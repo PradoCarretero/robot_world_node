@@ -1,8 +1,9 @@
+
 export default class Knowledge {
-    constructor( ) {
-        this.facts = [];
+    constructor() {
         this.x = 0;
         this.y = 0;
+        this.facts = [];
     }
 
     factCount () {
@@ -15,8 +16,7 @@ export default class Knowledge {
     }
     
     addFact(aFact) {
-        newFact = aFact.adjust(this.x, this.y);
-        this.facts.push(newFact);
+        this.facts.push(aFact.adjust(this.x, this.y));
     }
 
     factAt (x, y) {

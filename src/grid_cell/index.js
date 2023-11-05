@@ -5,6 +5,6 @@ export default class GridCell {
         this.content = content;
     }
     adjust (x, y) {
-        return new GridCell(this.x += x, this.y += y,this.content);
+        return new GridCell(this.x + x, this.y + y,this.content);
     }
 }

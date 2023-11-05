@@ -10,7 +10,7 @@ describe("Robot", function () {
 
   it("updates knowledge on move", () => {
     const world = new World();
-    const robot = new Robot(world);
+    const robot = new Robot(0, 0, "", world);
     robot.scan();
 
     expect(robot.factAt(5, 6)).equal("fact");
@@ -18,6 +18,7 @@ describe("Robot", function () {
     robot.move(1, 1);
 
     expect(robot.factAt(4, 5)).equal("fact");
-    expect(robot.factAt(5, 6)).equal("null");
+    expect(robot.factAt(5, 6)).equal("");
   });
 });
+
